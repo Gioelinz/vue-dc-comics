@@ -36,8 +36,8 @@ export default {
 .nav-container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 15px 0;
+  justify-content: space-between;
+  padding: 13px 0;
 }
 
 ul {
@@ -51,12 +51,15 @@ ul li {
 }
 ul li a {
   text-decoration: none;
-  color: black;
+  color: rgb(88, 88, 88);
   font-size: 0.9rem;
+  font-weight: bold;
+  padding: 100% 0;
 }
 
 ul li a.active {
   color: $primary_color;
+  border-bottom: 5px solid $primary_color;
 }
 </style>
 
