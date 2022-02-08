@@ -64,11 +64,30 @@ ul li a {
   font-size: 0.9rem;
   font-weight: bold;
   padding: 3.55rem 0;
+  position: relative;
 }
 
 ul li a.active {
   color: $primary_color;
   border-bottom: 5px solid $primary_color;
+}
+
+ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 100%;
+  height: 0;
+  background: $primary_color;
+  transition: height 0.5s ease;
+}
+
+ul li a:hover::before {
+  height: 5px;
+}
+
+ul li a:hover {
+  color: $primary_color;
 }
 </style>
 
