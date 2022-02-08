@@ -7,16 +7,11 @@
         </figure>
         <nav>
           <ul>
-            <li><a href="#">CHARACTERS</a></li>
-            <li><a href="#" class="active">COMICS</a></li>
-            <li><a href="#">MOVIES</a></li>
-            <li><a href="#">TV</a></li>
-            <li><a href="#">GAMES</a></li>
-            <li><a href="#">COLLECTIBLES</a></li>
-            <li><a href="#">VIDEOS</a></li>
-            <li><a href="#">FANS</a></li>
-            <li><a href="#">NEWS</a></li>
-            <li><a href="#">SHOP</a></li>
+            <li v-for="navItem in navItems" :key="navItem.text">
+              <a href="#" :class="{ active: navItem.active }">{{
+                navItem.text
+              }}</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -27,6 +22,22 @@
 <script>
 export default {
   name: "Header",
+  data() {
+    return {
+      navItems: [
+        { text: "CHARACTERS", active: false },
+        { text: "COMICS", active: true },
+        { text: "MOVIES", active: false },
+        { text: "TV", active: false },
+        { text: "GAMES", active: false },
+        { text: "COLLECTIBLES", active: false },
+        { text: "VIDEOS", active: false },
+        { text: "FANS", active: false },
+        { text: "NEWS", active: false },
+        { text: "SHOP", active: false },
+      ],
+    };
+  },
 };
 </script>
 
@@ -52,7 +63,7 @@ ul li a {
   color: rgb(88, 88, 88);
   font-size: 0.9rem;
   font-weight: bold;
-  padding: 100% 0;
+  padding: 3.55rem 0;
 }
 
 ul li a.active {
