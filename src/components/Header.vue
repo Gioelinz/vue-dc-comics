@@ -46,11 +46,9 @@ ul {
 }
 
 ul li {
-  list-style-type: none;
   padding: 1rem;
 }
 ul li a {
-  text-decoration: none;
   color: rgb(88, 88, 88);
   font-size: 0.9rem;
   font-weight: bold;

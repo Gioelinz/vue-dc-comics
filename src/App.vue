@@ -3,6 +3,7 @@
     <Header />
     <Main />
     <Links />
+    <Footer />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import Header from "./components/Header.vue";
 import Main from "./components/Main.vue";
 import Links from "./components/Links.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
@@ -17,6 +19,7 @@ export default {
     Header,
     Main,
     Links,
+    Footer,
   },
 };
 </script>
@@ -39,6 +42,14 @@ export default {
 img {
   max-width: 100%;
   height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
 }
 
 /* utils */
