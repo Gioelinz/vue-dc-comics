@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="container">
+    <div class="container relative">
       <div class="cols d-flex">
         <div class="footer-lists">
           <h2>DC COMICS</h2>
@@ -46,6 +46,7 @@
           </ul>
         </div>
       </div>
+      <img src="../assets/img/dc-logo-bg.png" alt="Logo BG" />
     </div>
   </footer>
 </template>
@@ -77,5 +78,15 @@ footer {
       }
     }
   }
+}
+
+.relative {
+  position: relative;
+}
+
+img {
+  position: absolute;
+  top: -50px;
+  right: 0;
 }
 </style>
