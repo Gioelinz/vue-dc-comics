@@ -2,18 +2,21 @@
   <div id="app">
     <Header />
     <Main />
+    <Links />
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
 import Main from "./components/Main.vue";
+import Links from "./components/Links.vue";
 
 export default {
   name: "App",
   components: {
     Header,
     Main,
+    Links,
   },
 };
 </script>
@@ -36,5 +39,11 @@ export default {
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* utils */
+
+.d-flex {
+  display: flex;
 }
 </style>
