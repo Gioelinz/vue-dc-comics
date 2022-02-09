@@ -55,6 +55,7 @@ export default {
 
 img {
   max-width: 100%;
+  pointer-events: none;
   height: auto;
 }
 
