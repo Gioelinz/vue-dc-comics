@@ -2,9 +2,9 @@
   <section id="links">
     <div class="container d-flex">
       <div class="item-link" v-for="(link, index) in blueLinks" :key="index">
+        <img :src="require('../assets/img/' + link.src)" />
         <a href="#">
-          <img :src="require('../assets/img/' + link.src)" />
-          {{ link.text }}
+          <p>{{ link.text }}</p>
         </a>
       </div>
     </div>
@@ -41,6 +41,9 @@ export default {
       text-decoration: none;
       display: flex;
       align-items: center;
+      p {
+        width: 150px;
+      }
     }
   }
 }
