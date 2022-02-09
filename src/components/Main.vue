@@ -146,8 +146,8 @@ main .container {
   .cards-container {
     display: flex;
     flex-wrap: wrap;
-    flex-basis: calc(100% / 6);
     .series-card {
+      flex-basis: calc(100% / 6);
       padding: 20px;
       img {
         min-width: 180px;
