@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
     <Main />
-    <Links />
+    <Links :blue-links="blueLinks" />
     <Footer />
     <B_Footer />
   </div>
@@ -23,6 +23,17 @@ export default {
     Links,
     Footer,
     B_Footer,
+  },
+  data() {
+    return {
+      blueLinks: [
+        { src: "buy-comics-digital-comics.png", text: "DIGITAL COMICS" },
+        { src: "buy-comics-merchandise.png", text: "DC MERCHANDISE" },
+        { src: "buy-comics-subscriptions.png", text: "SUBSCRIPTION" },
+        { src: "buy-comics-shop-locator.png", text: "COMIC SHOP LOCATOR" },
+        { src: "buy-dc-power-visa.svg", text: "DC POWER VISA" },
+      ],
+    };
   },
 };
 </script>

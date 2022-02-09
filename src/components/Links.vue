@@ -1,46 +1,10 @@
 <template>
   <section id="links">
     <div class="container d-flex">
-      <div class="item-link">
+      <div class="item-link" v-for="(link, index) in blueLinks" :key="index">
         <a href="#">
-          <img
-            src="../assets/img/buy-comics-digital-comics.png"
-            alt="Digital comics"
-          />
-          DIGITAL COMICS
-        </a>
-      </div>
-      <div class="item-link">
-        <a href="#">
-          <img
-            src="../assets/img/buy-comics-merchandise.png"
-            alt="Digital comics"
-          />
-          DC MERCHANDISE
-        </a>
-      </div>
-      <div class="item-link">
-        <a href="#">
-          <img
-            src="../assets/img/buy-comics-subscriptions.png"
-            alt="Digital comics"
-          />
-          SUBSCRIPTION
-        </a>
-      </div>
-      <div class="item-link">
-        <a href="#">
-          <img
-            src="../assets/img/buy-comics-shop-locator.png"
-            alt="Digital comics"
-          />
-          COMIC SHOP LOCATOR
-        </a>
-      </div>
-      <div class="item-link">
-        <a href="#">
-          <img src="../assets/img/buy-dc-power-visa.svg" alt="Digital comics" />
-          DC POWER VISA
+          <img :src="require('../assets/img/' + link.src)" />
+          {{ link.text }}
         </a>
       </div>
     </div>
@@ -50,6 +14,9 @@
 <script>
 export default {
   name: "Links",
+  props: {
+    blueLinks: Array,
+  },
 };
 </script>
 
